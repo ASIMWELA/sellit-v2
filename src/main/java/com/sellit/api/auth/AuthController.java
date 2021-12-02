@@ -16,7 +16,7 @@ import javax.validation.Valid;
 @RequestMapping("/api/v1/auth")
 public class AuthController {
 
-    private final AuthServiceImpl authServiceImpl;
+    private final AuthService authServiceImpl;
     public AuthController(AuthServiceImpl authServiceImpl) {
         this.authServiceImpl = authServiceImpl;
     }

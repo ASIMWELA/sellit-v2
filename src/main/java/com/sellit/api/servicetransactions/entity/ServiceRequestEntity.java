@@ -12,6 +12,7 @@ import org.hibernate.annotations.LazyCollectionOption;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -30,12 +31,10 @@ public class ServiceRequestEntity extends BaseEntity {
     String requirementDescription;
     @Column(name="required_on", nullable = false)
     @NonNull
-    Date requiredOn;
+    LocalDate requiredOn;
     @Column(name="expected_start_time", nullable = false)
     @NonNull
-
-    //TODO: change it to string datatype in the schema model
-    Date expectedStartTime;
+    LocalDate expectedStartTime;
     @Column(name="expected_tentative_effort_required_in_hours", length = 100, nullable = false)
     Long expectedTentativeEffortRequiredInHours;
     @ManyToOne
